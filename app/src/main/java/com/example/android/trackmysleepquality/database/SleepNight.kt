@@ -23,6 +23,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "daily_sleep_quality_night")
 class SleepNight {
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "_id")
     var sleepNightId: Long = 0L
 
     @ColumnInfo(name = "start_time_milli")
