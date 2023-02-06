@@ -21,17 +21,17 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "daily_sleep_quality_night")
-class SleepNight {
+data class SleepNight (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "_id")
-    var sleepNightId: Long = 0L
+    var sleepNightId: Long = 0L,
 
     @ColumnInfo(name = "start_time_milli")
-    var startNightInMs: Long = System.currentTimeMillis()
+    var startNightInMs: Long = System.currentTimeMillis(),
 
     @ColumnInfo(name = "end_time_milli")
-    var endNightInMs: Long = startNightInMs
+    var endNightInMs: Long = startNightInMs,
 
     @ColumnInfo(name = "quality_rating")
     var nightQuality: Int = -1
-}
+)
